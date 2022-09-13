@@ -169,7 +169,7 @@ wb.save(path_excel_file)
 # Определение отправителя, получателя, тему, текст письма
 msg = EmailMessage()
 sender = 'kruglik.a.s@mail.ru'
-recipients = ['huawei.andre.kruglik@gmail.com', sender]
+recipients = ['MikAlBelov@Greenatom.ru', sender]
 msg['From'] = sender
 msg['To'] = recipients
 msg['Subject'] = 'Круглик Андрей Сергеевич. Тестовое задание на Python'
@@ -186,5 +186,5 @@ with open(path_excel_file, 'rb') as f:
 
 # Отправка письма
 with smtplib.SMTP_SSL('smtp.mail.ru', 465) as mailserver:
-    mailserver.login(sender, 's0aBkX1EvzqwP1SmYtUq')
+    mailserver.login(sender, 'password_for_app')
     mailserver.sendmail(sender, recipients, msg.as_string())
